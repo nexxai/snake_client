@@ -17,16 +17,12 @@ const handleUserInput = function (key) {
   if (key === '\u0003') {
     process.exit();
   } else if (MOVE_UP_KEY.includes(key)) {
-    // connection.write('Move: up');
     constantMovement('up');
   } else if (MOVE_LEFT_KEY.includes(key)) {
-    // connection.write('Move: left');
     constantMovement('left');
   } else if (MOVE_DOWN_KEY.includes(key)) {
-    // connection.write('Move: down');
     constantMovement('down');
   } else if (MOVE_RIGHT_KEY.includes(key)) {
-    // connection.write('Move: right');
     constantMovement('right');
   } else if (key == 'n') {
     connection.write('Say: nexxai got this');
