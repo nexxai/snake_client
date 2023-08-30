@@ -21,6 +21,8 @@ const handleUserInput = function (key) {
     connection.write('Move: down');
   } else if (key == 'd') {
     connection.write('Move: right');
+  } else if (key == 'n') {
+    connection.write('Say: nexxai got this');
   }
 };
 
