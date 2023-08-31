@@ -1,6 +1,5 @@
 const { ENCODING, MOVE_UP_KEY, MOVE_LEFT_KEY, MOVE_DOWN_KEY, MOVE_RIGHT_KEY } = require('./constants');
 let connection;
-let direction;
 let moving;
 
 const setupInput = function (conn) {
