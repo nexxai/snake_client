@@ -1,4 +1,10 @@
-const { ENCODING, MOVE_UP_KEY, MOVE_LEFT_KEY, MOVE_DOWN_KEY, MOVE_RIGHT_KEY } = require('./constants');
+const {
+  ENCODING,
+  MOVE_UP_KEY,
+  MOVE_LEFT_KEY,
+  MOVE_DOWN_KEY,
+  MOVE_RIGHT_KEY,
+} = require("./constants");
 let connection;
 let moving;
 
@@ -13,18 +19,18 @@ const setupInput = function (conn) {
 };
 
 const handleUserInput = function (key) {
-  if (key === '\u0003') {
+  if (key === "\u0003") {
     process.exit();
   } else if (MOVE_UP_KEY.includes(key)) {
-    constantMovement('up');
+    constantMovement("up");
   } else if (MOVE_LEFT_KEY.includes(key)) {
-    constantMovement('left');
+    constantMovement("left");
   } else if (MOVE_DOWN_KEY.includes(key)) {
-    constantMovement('down');
+    constantMovement("down");
   } else if (MOVE_RIGHT_KEY.includes(key)) {
-    constantMovement('right');
-  } else if (key == 'n') {
-    connection.write('Say: nexxai got this');
+    constantMovement("right");
+  } else if (key == "n") {
+    connection.write("Say: nexxai got this");
   }
 };
 
@@ -33,12 +39,12 @@ const constantMovement = function (direction) {
     clearInterval(moving);
   }
   move(direction);
-}
+};
 
-const move = function(direction) {
+const move = function (direction) {
   moving = setInterval(() => {
-    connection.write(`Move: ${direction}`)
+    connection.write(`Move: ${direction}`);
   }, 100);
-} 
+};
 
 module.exports = { setupInput };
